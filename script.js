@@ -34,15 +34,6 @@ function addToCart(product) {
   saveCart(cart);
   updateCartCount();
   showToast();
-  renderCart();        // cart ko show karny k liye
-
-}
-function showTooltip(button) {
-  const tooltip = bootstrap.Tooltip.getInstance(button) || new bootstrap.Tooltip(button);
-  tooltip.show();
-  setTimeout(() => {
-    tooltip.hide();
-  }, 1500);
 }
 function showToast() {
   const toastEl = document.getElementById('cart-toast');
@@ -63,17 +54,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-let openshopping=document.querySelector('.shopping');
-let closepshopping=document.querySelector('.closeshopping');
-let list=document.querySelector('.list')
-let listcard=document.querySelector('.listcard')
-let body=document.querySelector('.body')
-let total=document.querySelector('.total')
-let quantity=document.querySelector('.quantity')
 
-openshopping.addEventListener('click',()=>{
-  body.classList.add('active');
-})
-closepshopping.addEventListener('click',()=>{
-  body.classList.remove('active');
-})
